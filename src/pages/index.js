@@ -35,6 +35,27 @@ const ArrowDown = styled.img`
   position: absolute;
 `;
 
+/******************************************************
+PORTFOLIO SECTION
+******************************************************/
+const PortfolioWrapper = styled.div`
+  background-attachment: fixed, scroll;
+  background-color: #615464;
+  background-size: cover;
+  overflow: auto;
+  width: 100%;
+  clear: both;
+`;
+
+const PortfolioHead = styled.div`
+  background: #6e6a67;
+  padding: 5%;
+  text-align: center;
+  p {
+    margin-top: 5rem;
+  }
+`;
+
 export default () => (
   <React.Fragment>
     <HeroWrapper>
@@ -43,6 +64,13 @@ export default () => (
       </div>
         <ArrowDown src={`${arrowDown}`} />
     </HeroWrapper>
+    <PortfolioWrapper>
+      <PortfolioHead>
+        <h1>Work</h1>
+        <h3>My recent work</h3>
+        <p>Check out a collection of my freelance work as a web designer and developer</p>
+      </PortfolioHead>
+    </PortfolioWrapper>
     <GlobalStyle />
   </React.Fragment>
 );
