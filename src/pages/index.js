@@ -82,6 +82,33 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2.1rem;
     line-height: 3rem;
   }
+
+  @font-face {
+    font-family: 'bebas_neuebold';
+    src: url('/fonts/BebasNeue Bold-webfont.eot');
+    src: url('/fonts/BebasNeue Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/BebasNeue Bold-webfont.woff2') format('woff2'),
+         url('/fonts/BebasNeue Bold-webfont.woff') format('woff'),
+         url('/fonts/BebasNeue Bold-webfont.ttf') format('truetype'),
+         url('/fonts/BebasNeue Bold-webfont.svg#bebas_neuebold') format('svg');
+    font-weight: 900;
+    font-style: bold;
+  
+  }
+  
+  @font-face {
+    font-family: 'bebas_neue_regularregular';
+    src: url('/fonts/BebasNeue Regular-webfont.eot');
+    src: url('/fonts/BebasNeue Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/BebasNeue Regular-webfont.woff2') format('woff2'),
+         url('/fonts/BebasNeue Regular-webfont.woff') format('woff'),
+         url('/fonts/BebasNeue Regular-webfont.ttf') format('truetype'),
+         url('/fonts/BebasNeue Regular-webfont.svg#bebas_neue_regularregular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 `
 
 const HeroWrapper = styled.div`
@@ -100,7 +127,7 @@ const HeroWrapper = styled.div`
 export default () => (
   <React.Fragment>
     <HeroWrapper>
-      <h3>Let's see about this</h3>
+      <h1>Let's see about this</h1>
       <p>this is a test</p>
     </HeroWrapper>
     <GlobalStyle />
