@@ -10,17 +10,17 @@ import arrowDown from '../../public/images/arrowdown.svg';
 HERO SECTION
 ******************************************************/
 const HeroWrapper = styled.div`
-  width: 100%;
   background: url(${bgIgm}) no-repeat center;
-  height: 100vh;
   display: table;
+  height: 100vh;
   margin: 0;
   max-width: none;
   text-align: center;
+  width: 100%;
   div {
     display: table-cell;
-    vertical-align: middle;
     padding-bottom: 225px;
+    vertical-align: middle;
   }
 `;
 
@@ -29,10 +29,10 @@ const Logo = styled.img`
 `;
 
 const ArrowDown = styled.img`
-  position: absolute;
   bottom: 50px;
   left: 50%;
   margin-left: -40px;
+  position: absolute;
 `;
 
 export default () => (
