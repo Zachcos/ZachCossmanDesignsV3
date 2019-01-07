@@ -1,0 +1,190 @@
+[
+  {
+    "title": "BroadwayGivesBack.com",
+    "subtitle": "Responsive Site Design",
+    "imgUrl": "../../images/port-broadwaygivesback.jpg",
+    "slug": "/broadwaygivesback",
+    "assets": [
+      "../../images/projects/broadwaycharitysongs/fulldisplay_home.jpg",
+      "../../images/projects/broadwaycharitysongs/fulldisplay_charities.jpg",
+      "../../images/projects/broadwaycharitysongs/mobiledisplay.jpg",
+      "../../images/projects/broadwaycharitysongs/tabletdisplay.jpg"
+    ]
+  },
+  {
+    "title": "SheetSwap",
+    "subtitle": "Rails App and Site Design",
+    "imgUrl": "../../images/port-sheetswap.jpg",
+    "slug": "/sheetswap",
+    "assets": [
+      "../../images/projects/sheetswap/fulldisplay.jpg",
+      "../../images/projects/sheetswap/desktop.jpg"
+    ]
+  },
+  {
+    "title": "Brooklyn Custom Shop",
+    "subtitle": "Landing Page / Site Design",
+    "imgUrl": "../../images/port-brooklyncustomshop.jpg",
+    "slug": "/brooklyncustomshop",
+    "assets": [
+      "../../images/projects/brooklyncustomshop/fulldisplay.jpg",
+      "../../images/projects/brooklyncustomshop/laptopdisplay.jpg"
+    ]
+  },
+  {
+    "title": "Townsley & Gay",
+    "subtitle": "WordPress Theme and Site Design",
+    "imgUrl": "../../images/port-townsleygay.jpg",
+    "slug": "/townsleygay",
+    "assets": [
+      "../../images/projects/townsleygay/fulldisplay.jpg",
+      "../../images/projects/townsleygay/tabletdisplay.jpg",
+      "../../images/projects/townsleygay/phonedisplay.jpg"
+    ]
+  },
+  {
+    "title": "Zach Cossman Designs v3",
+    "subtitle": "Responsive One-Page Site Design",
+    "imgUrl": "../../images/port-zachcossmandesigns3.jpg",
+    "slug": "/zachcossmandesignsv3",
+    "assets": [
+      "../../images/projects/zachcossmandesigns3/fulldisplay.jpg",
+      "../../images/projects/zachcossmandesigns3/tabletdisplay.jpg",
+      "../../images/projects/zachcossmandesigns3/mobiledisplay.jpg"
+    ]
+  },
+  {
+    "title": "Woodelf Collective",
+    "subtitle": "Brand Identity / Logo Design",
+    "imgUrl": "../../images/port-woodelfcollective.jpg",
+    "slug": "/woodelfcollectivebrand",
+    "assets": [
+      "../../images/projects/woodelfcollective/black_businesscard.jpg",
+      "../../images/projects/woodelfcollective/cutemboss_businesscard.jpg",
+      "../../images/projects/woodelfcollective/engraved_logo.jpg",
+      "../../images/projects/woodelfcollective/rustic_businesscard.jpg",
+      "../../images/projects/woodelfcollective/shopsign_logo.jpg",
+      "../../images/projects/woodelfcollective/window_logo.jpg"
+    ]
+  },
+  {
+    "title": "Woodelf Collective",
+    "subtitle": "Landing Page / Site Design",
+    "imgUrl": "../../images/port-woodelfcollective2.jpg",
+    "slug": "/woodelfcollectivesite",
+    "assets": [
+      "../../images/projects/woodelfcollective/fulldisplay.jpg",
+      "../../images/projects/woodelfcollective/desktopdisplay.jpg"
+    ]
+  },
+  {
+    "title": "Polygon Portfolio",
+    "subtitle": "Site Design",
+    "imgUrl": "../../images/port-polygonportfolio.jpg",
+    "slug": "/polygonportfolio",
+    "assets": [
+      "../../images/projects/polygonportfolio/fulldisplay.jpg",
+      "../../images/projects/polygonportfolio/slider.gif",
+      "../../images/projects/polygonportfolio/laptopdisplay.jpg"
+    ]
+  },
+  {
+    "title": "Feedback Revival",
+    "subtitle": "CD Jewel Case and Album Art",
+    "imgUrl": "../../images/port-feedbackrevival.jpg",
+    "slug": "/feedbackrevival",
+    "assets": [
+      "../../images/projects/feedbackrevival/cd.jpg",
+      "../../images/projects/feedbackrevival/poster.jpg",
+      "../../images/projects/feedbackrevival/vinyl.jpg"
+    ]
+  },
+  {
+    "title": "MBL Productions",
+    "subtitle": "Responsive Site Design",
+    "imgUrl": "../../images/port-mblproductions.jpg",
+    "slug": "/mblproductions",
+    "assets": [
+      "../../images/projects/mblproductions/fulldisplay.jpg",
+      "../../images/projects/mblproductions/tabletdisplay.jpg",
+      "../../images/projects/mblproductions/mobiledisplay.jpg"
+    ]
+  },
+  {
+    "title": "ZachCossman.com",
+    "subtitle": "Responsive Site Design",
+    "imgUrl": "../../images/port-zachcossman.jpg",
+    "slug": "/zachcossman",
+    "assets": [
+      "../../images/projects/zachcossman/fulldisplay.jpg",
+      "../../images/projects/zachcossman/tabletdisplay.jpg",
+      "../../images/projects/zachcossman/mobiledisplay.jpg"
+    ]
+  },
+  {
+    "title": "BlaineBoyd.com",
+    "subtitle": "Responsive Site Design",
+    "imgUrl": "../../images/port-blaineboyd.jpg",
+    "slug": "/blaineboyd",
+    "assets": [
+      "../../images/projects/blaineboyd/fulldisplay.jpg",
+      "../../images/projects/blaineboyd/latptopdisplay.jpg",
+      "../../images/projects/blaineboyd/mobiledisplay.jpg"
+    ]
+  },
+  {
+    "title": "SarahAgar.com",
+    "subtitle": "Responsive Site Design",
+    "imgUrl": "../../images/port-sarahagar.jpg",
+    "slug": "/sarahagar",
+    "assets": [
+      "../../images/projects/sarahagar/fulldisplay.jpg",
+      "../../images/projects/sarahagar/tabletdisplay.jpg",
+      "../../images/projects/sarahagar/mobiledisplay.jpg"
+    ]
+  },
+  {
+    "title": "ShaveyBrown.com",
+    "subtitle": "Responsive Site Design",
+    "imgUrl": "../../images/port-shaveybrown.jpg",
+    "slug": "/shaveybrown",
+    "assets": [
+      "../../images/projects/shaveybrown/fulldisplay.jpg",
+      "../../images/projects/shaveybrown/mobiledisplay.jpg"
+    ]
+  },
+  {
+    "title": "Unbroken Circle",
+    "subtitle": "Graphic Design",
+    "imgUrl": "../../images/port-unbrokencircle.jpg",
+    "slug": "/unbrokencircle",
+    "assets": [
+      "../../images/projects/unbrokencircle/poster.jpg",
+      "../../images/projects/unbrokencircle/shirt.jpg",
+      "../../images/projects/unbrokencircle/gallery.jpg",
+      "../../images/projects/unbrokencircle/keyart.jpg"
+    ]
+  },
+  {
+    "title": "Midtown March Medley",
+    "subtitle": "Graphic Design",
+    "imgUrl": "../../images/port-midtownmarchmedley.jpg",
+    "slug": "/midtownmarchmedley",
+    "assets": [
+      "../../images/projects/midtownmarchmedley/folded.jpg",
+      "../../images/projects/midtownmarchmedley/2copy.jpg",
+      "../../images/projects/midtownmarchmedley/mug.jpg",
+      "../../images/projects/midtownmarchmedley/floating.jpg",
+      "../../images/projects/midtownmarchmedley/bent.jpg"
+    ]
+  },
+  {
+    "title": "ZachCossmanDesigns v2",
+    "subtitle": "One-Page Scrolling Site Design",
+    "imgUrl": "../../images/port-zachcossmandesigns2.jpg",
+    "slug": "/zachcossmandesignsv2",
+    "assets": [
+      "../../images/projects/zachcossmandesigns2/fulldisplay.jpg"
+    ]
+  }
+]
