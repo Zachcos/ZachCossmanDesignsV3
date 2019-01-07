@@ -6,6 +6,9 @@ import bgIgm from '../../public/images/bg_blur.jpg';
 import logo from '../../public/images/zcd.svg';
 import arrowDown from '../../public/images/arrowdown.svg';
 
+/******************************************************
+HERO SECTION
+******************************************************/
 const HeroWrapper = styled.div`
   width: 100%;
   background: url(${bgIgm}) no-repeat center;
