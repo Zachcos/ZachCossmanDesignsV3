@@ -2,24 +2,43 @@ import React from "react"
 import styled from "styled-components";
 import GlobalStyle from "../imports/globalStyle";
 
+import bgIgm from '../../public/images/bg_blur.jpg';
+import logo from '../../public/images/zcd.svg';
+import arrowDown from '../../public/images/arrowdown.svg';
+
 const HeroWrapper = styled.div`
-  background: darkred;
   width: 100%;
-  height: 250px;
+  background: url(${bgIgm}) no-repeat center;
+  height: 100vh;
+  display: table;
   margin: 0;
-  padding: 0;
-  p {
-    margin: 0;
-    padding: 0;
-    color: white;
+  max-width: none;
+  text-align: center;
+  div {
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 225px;
   }
+`;
+
+const Logo = styled.img`
+  max-width: 75%;
+`;
+
+const ArrowDown = styled.img`
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -40px;
 `;
 
 export default () => (
   <React.Fragment>
     <HeroWrapper>
-      <h1>Let's see about this</h1>
-      <p>this is a test</p>
+      <div>
+        <Logo src={`${logo}`} />
+      </div>
+        <ArrowDown src={`${arrowDown}`} />
     </HeroWrapper>
     <GlobalStyle />
   </React.Fragment>
