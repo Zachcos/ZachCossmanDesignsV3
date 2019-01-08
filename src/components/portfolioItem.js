@@ -75,18 +75,15 @@ const PortItemWrapper = styled.div`
     }
   `;
 
-export default ({ data }) => {
-  console.log('data passed in: ', data)
-  return (
-    <PortItemWrapper>
-      <Overlay>
-        <Title>{data.title}</Title>
-        <Divider />
-        <Subtitle>project subtitle</Subtitle>
-        <Button href="#">
-          <h6>explore this project</h6>
-        </Button>
-      </Overlay>
-    </PortItemWrapper>
-  )
-}
+export default ({ data }) => (
+  <PortItemWrapper>
+    <Overlay>
+      <Title>{data.title}</Title>
+      <Divider />
+      <Subtitle>project subtitle</Subtitle>
+      <Button href="#">
+        <h6>explore this project</h6>
+      </Button>
+    </Overlay>
+  </PortItemWrapper>
+)
