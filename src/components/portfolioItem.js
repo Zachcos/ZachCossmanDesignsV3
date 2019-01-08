@@ -76,11 +76,11 @@ const PortItemWrapper = styled.div`
   `;
 
 export default ({ data }) => {
-  console.log(data)
+  console.log('data passed in: ', data)
   return (
     <PortItemWrapper>
       <Overlay>
-        <Title>Project Title</Title>
+        <Title>{data.title}</Title>
         <Divider />
         <Subtitle>project subtitle</Subtitle>
         <Button href="#">

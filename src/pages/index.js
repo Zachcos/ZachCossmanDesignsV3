@@ -76,7 +76,6 @@ export default ({ data }) => (
       {data.allPortfolioDataJson.edges.map(item => {
         return <PortfolioItem key={item.node.id} data={item.node} />
       })}
-      <PortfolioItem />
     </PortfolioWrapper>
     <GlobalStyle />
   </React.Fragment>
