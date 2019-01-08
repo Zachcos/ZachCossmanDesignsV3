@@ -57,7 +57,7 @@ const PortfolioHead = styled.div`
   }
 `;
 
-export default () => (
+export default ({ data }) => (
   <React.Fragment>
     <HeroWrapper>
       <div>
@@ -71,6 +71,9 @@ export default () => (
         <h3>My recent work</h3>
         <p>Check out a collection of my freelance work as a web designer and developer</p>
       </PortfolioHead>
+      {data.allPortfolioDataJson.edges.map(item => {
+        return <p>{item.node.title}</p>
+      })}
     </PortfolioWrapper>
     <GlobalStyle />
   </React.Fragment>
