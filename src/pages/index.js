@@ -8,6 +8,7 @@ import PortfolioItem from "../components/portfolioItem";
 import bgIgm from '../../public/images/bg_blur.jpg';
 import logo from '../../public/images/zcd.svg';
 import arrowDown from '../../public/images/arrowdown.svg';
+import headshot from "../../public/images/zcoss.jpg";
 
 /******************************************************
 HERO SECTION
@@ -72,6 +73,21 @@ const AboutWrapper = styled.div`
   text-align: center;
 `;
 
+const AboutMe = styled.div`
+  float: left;
+  padding: 3%;
+  width: 60%;
+  p {
+    margin: 5% 0;
+  }
+`;
+
+const Headshot = styled.img`
+  border-radius: 50%;
+  max-width: 400px;
+  width: 40%;
+`;
+
 export default ({ data }) => (
   <React.Fragment>
     <HeroWrapper>
@@ -91,7 +107,13 @@ export default ({ data }) => (
       })}
     </PortfolioWrapper>
     <AboutWrapper>
-      This is the about section!
+      <AboutMe>
+        <h1>Hey, I'm Zach.</h1>
+        <h3>I design websites</h3>
+        <p>I am an actor, musician, and freelance designer.</p>
+        <p>I create unique sites for clients with a simple aesthetic based on clean design and good typography.</p>
+      </AboutMe>
+      <Headshot src={headshot} />
     </AboutWrapper>
     <GlobalStyle />
   </React.Fragment>
