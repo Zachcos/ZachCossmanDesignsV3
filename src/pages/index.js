@@ -3,6 +3,8 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 import GlobalStyle from "../imports/globalStyle";
 
+import PortfolioItem from "../components/portfolioItem";
+
 import bgIgm from '../../public/images/bg_blur.jpg';
 import logo from '../../public/images/zcd.svg';
 import arrowDown from '../../public/images/arrowdown.svg';
@@ -72,8 +74,9 @@ export default ({ data }) => (
         <p>Check out a collection of my freelance work as a web designer and developer</p>
       </PortfolioHead>
       {data.allPortfolioDataJson.edges.map(item => {
-        return <p>{item.node.title}</p>
+        return <PortfolioItem key={item.node.key} data={item.node} />
       })}
+      <PortfolioItem />
     </PortfolioWrapper>
     <GlobalStyle />
   </React.Fragment>
