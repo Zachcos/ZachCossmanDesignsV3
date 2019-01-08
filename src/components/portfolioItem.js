@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const PortItemWrapper = styled.div`
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: table;
-  float: left;
   height: 500px;
   position: relative;
   text-align: center;
@@ -17,9 +13,13 @@ const PortItemWrapper = styled.div`
     background-color: transparent;
     background-image: -webkit-linear-gradient(318deg, rgba(69, 67, 61, 0.95), rgba(46, 46, 46, 0.90));
     background-image: linear-gradient(132deg, rgba(69, 67, 61, 0.95), rgba(46, 46, 46, 0.90));
+    display: table-cell;
     opacity: 0;
-	  transition: all 500ms ease;
+    text-align: center;
+    transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
+    vertical-align: middle; 
+    width: 100%;
     &:hover {
       opacity: 100;
     }
@@ -76,11 +76,18 @@ const PortItemWrapper = styled.div`
   `;
 
 export default ({ data }) => (
-  <PortItemWrapper>
+  <PortItemWrapper 
+    style={{ 
+      background: `url('${data.imgUrl}')`,
+      backgroundSize: `cover`,
+      backgroundPosition: `50% 50%`,
+      backgroundRepeat: `no-repeat`,
+      float: `left`
+      }}>
     <Overlay>
       <Title>{data.title}</Title>
       <Divider />
-      <Subtitle>project subtitle</Subtitle>
+      <Subtitle>{data.subtitle}</Subtitle>
       <Button href="#">
         <h6>explore this project</h6>
       </Button>
