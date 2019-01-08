@@ -88,6 +88,38 @@ const Headshot = styled.img`
   width: 40%;
 `;
 
+/******************************************************
+CONTACT SECTION
+******************************************************/
+const ContactWrapper = styled.div`
+  background: #aaa39d;
+  color: #4e5258;
+  padding: 7% 5% 5% 5%;
+  text-align: center;
+  width: 100%;
+  h3 {
+    margin: -25px 0 45px 0;
+    font-size: 3rem;
+  }
+  p {
+    margin-bottom: 5%;
+  }
+  a {
+    font-family: 'bebas_neue_regularregular', sans-serif;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #303030;
+    transition: color 250ms;
+    &:hover {
+      color: #955251;
+    }
+  }
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+`;
+
 export default ({ data }) => (
   <React.Fragment>
     <HeroWrapper>
@@ -115,6 +147,18 @@ export default ({ data }) => (
       </AboutMe>
       <Headshot src={headshot} />
     </AboutWrapper>
+    <ContactWrapper>
+      <h1>Get ahold of me.</h1>
+      <h3>Are business cards still a thing?</h3>
+
+      <p>To talk about building your next project, email me at: <br />
+        <a href="MAILTO:zachcos@gmail.com">Zachcos@gmail.com</a>
+      </p>
+
+      <p>Looking for my work as actor? Visit: <br />
+        <a href="http://www.zachcossman.com" target="_blank">zachcossman.com</a>
+      </p>
+    </ContactWrapper>
     <GlobalStyle />
   </React.Fragment>
 );
