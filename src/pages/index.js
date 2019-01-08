@@ -59,6 +59,19 @@ const PortfolioHead = styled.div`
   }
 `;
 
+/******************************************************
+ABOUT SECTION
+******************************************************/
+const AboutWrapper = styled.div`
+  background: #696c71;
+  color: #e2e6e7;
+  margin-bottom: -3px;
+  overflow: auto;
+  overflow: hidden;
+  padding: 5%;
+  text-align: center;
+`;
+
 export default ({ data }) => (
   <React.Fragment>
     <HeroWrapper>
@@ -77,6 +90,9 @@ export default ({ data }) => (
         return <PortfolioItem key={item.node.id} data={item.node} />
       })}
     </PortfolioWrapper>
+    <AboutWrapper>
+      This is the about section!
+    </AboutWrapper>
     <GlobalStyle />
   </React.Fragment>
 );
