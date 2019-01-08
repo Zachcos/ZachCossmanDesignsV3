@@ -75,3 +75,19 @@ export default () => (
     <GlobalStyle />
   </React.Fragment>
 );
+
+export const query = graphql`
+  query {
+    allPortfolioDataJson {
+      edges {
+        node {
+          id
+          title
+          subtitle
+          imgUrl
+          slug
+        }
+      }
+    }
+  }
+`
