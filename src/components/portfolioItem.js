@@ -29,7 +29,7 @@ const PortItemWrapper = styled.div`
     color: #b0925a;
     font-size: 3.5rem;
     line-height: 3.5rem;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
     margin: 0;
   `;
 
