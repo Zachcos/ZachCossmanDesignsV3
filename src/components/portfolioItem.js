@@ -11,19 +11,18 @@ const PortItemWrapper = styled.div`
   position: relative;
   text-align: center;
   width: 50%;
+  `;
   
-  .overlay.tablecell {
+  const Overlay = styled.div`
     background-color: transparent;
     background-image: -webkit-linear-gradient(318deg, rgba(69, 67, 61, 0.95), rgba(46, 46, 46, 0.90));
     background-image: linear-gradient(132deg, rgba(69, 67, 61, 0.95), rgba(46, 46, 46, 0.90));
     opacity: 0;
 	  transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
-
     &:hover {
       opacity: 100;
     }
-  }
   `;
 
   const Title = styled.h1`
@@ -76,15 +75,15 @@ const PortItemWrapper = styled.div`
     }
   `;
 
-export default () => (
+export default ({ data }) => (
   <PortItemWrapper>
-    <div className="overlay tablecell">
-      <Title>Project title</Title>
+    <Overlay>
+      <Title>Project Title</Title>
       <Divider />
       <Subtitle>project subtitle</Subtitle>
       <Button href="#">
         <h6>explore this project</h6>
       </Button>
-    </div>
+    </Overlay>
   </PortItemWrapper>
 )
