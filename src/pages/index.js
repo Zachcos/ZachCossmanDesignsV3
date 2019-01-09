@@ -168,7 +168,7 @@ export default ({ data }) => (
       </p>
 
       <p>Looking for my work as actor? Visit: <br />
-        <a href="http://www.zachcossman.com" target="_blank">zachcossman.com</a>
+        <a href="http://www.zachcossman.com" target="_blank" rel="noopener noreferrer">zachcossman.com</a>
       </p>
       <SocialIcons>
         <FontAwesomeIcon icon={faInstagram} size="4x"/>
