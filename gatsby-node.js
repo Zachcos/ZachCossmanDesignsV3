@@ -8,10 +8,6 @@ exports.createPages = ({ graphql, actions }) => {
         allPortfolioDataJson {
           edges {
             node {
-              id
-              title
-              subtitle
-              imgUrl
               slug
             }
           }

@@ -3,7 +3,9 @@
     "title": "BroadwayGivesBack.com",
     "subtitle": "Responsive Site Design",
     "imgUrl": "../../images/port-broadwaygivesback.jpg",
+    "liveUrl": "",
     "slug": "/broadwaygivesback",
+    "description": "I've had the pleasure of designing and maintaining the website for Broadway Gives Back for each of it's 3 years of operation. This year we decided that the site was in need of an update to bring the site into 2015, especially on the mobile front. The result is what you see before you - a fully responsive site that looks great on any screen from widescreen to tablets and smartphones.",
     "assets": [
       "../../images/projects/broadwaycharitysongs/fulldisplay_home.jpg",
       "../../images/projects/broadwaycharitysongs/fulldisplay_charities.jpg",
@@ -15,7 +17,9 @@
     "title": "SheetSwap",
     "subtitle": "Rails App and Site Design",
     "imgUrl": "../../images/port-sheetswap.jpg",
+    "liveUrl": "",
     "slug": "/sheetswap",
+    "description": "A trial Ruby on Rails app, SheetSwap allows users to catalogue the sheet music they have collected, see other users' collections, and find other users' contact information when they're intested in trading. The site was built on the Ruby on Rails framework.",
     "assets": [
       "../../images/projects/sheetswap/fulldisplay.jpg",
       "../../images/projects/sheetswap/desktop.jpg"
@@ -25,7 +29,9 @@
     "title": "Brooklyn Custom Shop",
     "subtitle": "Landing Page / Site Design",
     "imgUrl": "../../images/port-brooklyncustomshop.jpg",
+    "liveUrl": "http://zachcossmandesigns.com/bcs",
     "slug": "/brooklyncustomshop",
+    "description": "A landing page for a ficticious guitar shop in my neighborhood in Brooklyn, NY. This was designed as landing page to showcase the featured items in each category, but could be easily adapted to be a fully-functioning site. Layout demo link below.",
     "assets": [
       "../../images/projects/brooklyncustomshop/fulldisplay.jpg",
       "../../images/projects/brooklyncustomshop/laptopdisplay.jpg"
@@ -35,7 +41,9 @@
     "title": "Townsley & Gay",
     "subtitle": "WordPress Theme and Site Design",
     "imgUrl": "../../images/port-townsleygay.jpg",
+    "liveUrl": "http://townsleyandg.com",
     "slug": "/townsleygay",
+    "description": "A custom WordPress theme for Townsley & Gay, a Brooklyn-based real estate company. We wanted to highlight the each listing with a large image, and then let the user look at more details once they click through a post. Once you click through, you are presented with options to check out the floorplan, a gallery of images, and check out the location with Google Maps integration.",
     "assets": [
       "../../images/projects/townsleygay/fulldisplay.jpg",
       "../../images/projects/townsleygay/tabletdisplay.jpg",
@@ -46,7 +54,9 @@
     "title": "Zach Cossman Designs v3",
     "subtitle": "Responsive One-Page Site Design",
     "imgUrl": "../../images/port-zachcossmandesigns3.jpg",
+    "liveUrl": "http://zachcossmandesigns.com/",
     "slug": "/zachcossmandesignsv3",
+    "description": "While under almost constant update, this version marks the third major change to Zach Cossman Designs in the past 5 years. This iteration is the most lightweight and device-friendly. The site uses HTML/CSS with jQuery and AJAX for the dynamic loading of the project files (like this one!)",
     "assets": [
       "../../images/projects/zachcossmandesigns3/fulldisplay.jpg",
       "../../images/projects/zachcossmandesigns3/tabletdisplay.jpg",
@@ -57,7 +67,9 @@
     "title": "Woodelf Collective",
     "subtitle": "Brand Identity / Logo Design",
     "imgUrl": "../../images/port-woodelfcollective.jpg",
+    "liveUrl": "",
     "slug": "/woodelfcollectivebrand",
+    "description": "Woodelf Collective started as wishful thinking between two friends looking for an outlet from their typical creative mediums and their desire to create something with their hands. The end result is branding that is vintage and rustic.",
     "assets": [
       "../../images/projects/woodelfcollective/black_businesscard.jpg",
       "../../images/projects/woodelfcollective/cutemboss_businesscard.jpg",
@@ -71,7 +83,9 @@
     "title": "Woodelf Collective",
     "subtitle": "Landing Page / Site Design",
     "imgUrl": "../../images/port-woodelfcollective2.jpg",
+    "liveUrl": "https://zachcossmandesigns.com/wec",
     "slug": "/woodelfcollectivesite",
+    "description": "Woodelf Collective started as wishful thinking between two friends looking for an outlet from their typical creative mediums and their desire to create something with their hands. The site blends the rustic feel of the branding with contemporary web designs trends. Layout demo link below.",
     "assets": [
       "../../images/projects/woodelfcollective/fulldisplay.jpg",
       "../../images/projects/woodelfcollective/desktopdisplay.jpg"
@@ -81,7 +95,9 @@
     "title": "Polygon Portfolio",
     "subtitle": "Site Design",
     "imgUrl": "../../images/port-polygonportfolio.jpg",
+    "liveUrl": "",
     "slug": "/polygonportfolio",
+    "description": "A basic portfolio layout with a nice geometric shape header and huge typography to catch the reader's eye, and uses diagonal lines throughout the sections of the site to help the site stand out. The Latest Work projects can be scrolled through with a multi-directional slider, which you can check out the GIF below.",
     "assets": [
       "../../images/projects/polygonportfolio/fulldisplay.jpg",
       "../../images/projects/polygonportfolio/slider.gif",
@@ -92,7 +108,9 @@
     "title": "Feedback Revival",
     "subtitle": "CD Jewel Case and Album Art",
     "imgUrl": "../../images/port-feedbackrevival.jpg",
+    "liveUrl": "",
     "slug": "/feedbackrevival",
+    "description": "I was super stoked to have Feedback Revival approach me for help with the design for their self-titled album. Based around a found-art portrait of an old man, this Nashville rock bands's album cover needed texture and attitude. After the release of the album, I had the opportunity to work with Feedback Revival again, designing their poster art for their 2014 European Tour.",
     "assets": [
       "../../images/projects/feedbackrevival/cd.jpg",
       "../../images/projects/feedbackrevival/poster.jpg",
@@ -103,7 +121,9 @@
     "title": "MBL Productions",
     "subtitle": "Responsive Site Design",
     "imgUrl": "../../images/port-mblproductions.jpg",
+    "liveUrl": "",
     "slug": "/mblproductions",
+    "description": "MBL Productions is a NYC-based production company with an ever-growing list of productions. I worked with them to create a web presence compliment to their logo that enabled a pleasant desktop and mobile experience.",
     "assets": [
       "../../images/projects/mblproductions/fulldisplay.jpg",
       "../../images/projects/mblproductions/tabletdisplay.jpg",
@@ -114,7 +134,9 @@
     "title": "ZachCossman.com",
     "subtitle": "Responsive Site Design",
     "imgUrl": "../../images/port-zachcossman.jpg",
+    "liveUrl": "http://zachcossman.com",
     "slug": "/zachcossman",
+    "description": "For my personal acting site, I wanted something clean, simple and responsive. I also wanted the ability to customize and change this site at any time, which is why I decided to build my site on Wordpress - allowing me to update the site from my iPad or iPhone on the fly.",
     "assets": [
       "../../images/projects/zachcossman/fulldisplay.jpg",
       "../../images/projects/zachcossman/tabletdisplay.jpg",
@@ -125,7 +147,9 @@
     "title": "BlaineBoyd.com",
     "subtitle": "Responsive Site Design",
     "imgUrl": "../../images/port-blaineboyd.jpg",
+    "liveUrl": "http://blaineboyd.com",
     "slug": "/blaineboyd",
+    "description": "For Blaine's site we wanted to focus on featuring his headshot so we used it as the background on every page. When content needs to take up the screen, we use transparency to make sure that his headshot is always visible.",
     "assets": [
       "../../images/projects/blaineboyd/fulldisplay.jpg",
       "../../images/projects/blaineboyd/latptopdisplay.jpg",
@@ -136,7 +160,9 @@
     "title": "SarahAgar.com",
     "subtitle": "Responsive Site Design",
     "imgUrl": "../../images/port-sarahagar.jpg",
+    "liveUrl": "http://sarahagar.com",
     "slug": "/sarahagar",
+    "description": "Sarah's site has been revamped with a clean and elegant design built on Wordpress that is fully responsive across all devices.",
     "assets": [
       "../../images/projects/sarahagar/fulldisplay.jpg",
       "../../images/projects/sarahagar/tabletdisplay.jpg",
@@ -147,7 +173,9 @@
     "title": "ShaveyBrown.com",
     "subtitle": "Responsive Site Design",
     "imgUrl": "../../images/port-shaveybrown.jpg",
+    "liveUrl": "",
     "slug": "/shaveybrown",
+    "description": "In this complete redesign of Shavey's site, I implemented Wordpress for quick and easy updates of articles and media. The design is responsive and features a contact form with jQuery validation.",
     "assets": [
       "../../images/projects/shaveybrown/fulldisplay.jpg",
       "../../images/projects/shaveybrown/mobiledisplay.jpg"
@@ -157,7 +185,9 @@
     "title": "Unbroken Circle",
     "subtitle": "Graphic Design",
     "imgUrl": "../../images/port-unbrokencircle.jpg",
+    "liveUrl": "",
     "slug": "/unbrokencircle",
+    "description": "I had the great pleasure of designing the logo for Unbroken Circle, a play that ran at St. Luke's Theatre in NYC for 7 months in 2013. In addition to creating the key art, I reconfigured the graphic many times over to fit the publishing specs of each publication the graphic was being used for.",
     "assets": [
       "../../images/projects/unbrokencircle/poster.jpg",
       "../../images/projects/unbrokencircle/shirt.jpg",
@@ -169,7 +199,9 @@
     "title": "Midtown March Medley",
     "subtitle": "Graphic Design",
     "imgUrl": "../../images/port-midtownmarchmedley.jpg",
+    "liveUrl": "",
     "slug": "/midtownmarchmedley",
+    "description": "In early 2013 I was tapped to design the logo for Midtown March Medley, a play festival in NYC. What I decided on was something light and fun and captured the essential NYC experience in the iconic subway letters.",
     "assets": [
       "../../images/projects/midtownmarchmedley/folded.jpg",
       "../../images/projects/midtownmarchmedley/2copy.jpg",
@@ -182,7 +214,9 @@
     "title": "ZachCossmanDesigns v2",
     "subtitle": "One-Page Scrolling Site Design",
     "imgUrl": "../../images/port-zachcossmandesigns2.jpg",
+    "liveUrl": "",
     "slug": "/zachcossmandesignsv2",
+    "description": "Zach Cossman Designs v2 was my first foray into single-page sites. ZCD v2 had a huge dependancy on Javascript, which rendered the site nearly useless if absent. In addition to being a single-page site, each section of the site featured a full-page background that took up the entire browser window.",
     "assets": [
       "../../images/projects/zachcossmandesigns2/fulldisplay.jpg"
     ]
