@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
+import GlobalStyle from "../imports/globalStyle";
 
 const DetailWrapper = styled.div`
   height: 100%;
@@ -60,14 +61,62 @@ const ExitBtn = styled.div`
   }
 `;
 
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 70%;
+  text-align: center;
+`;
+
+const Title = styled.h1`
+  font-family: "bebas_neue_regularregular", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 5.5rem;
+  margin: 0;
+  padding: 125px 0 0 0;
+`;
+
+const Subtitle = styled.h2`
+  color: #945351;
+  font-family: "bebas_neue_regularregular", sans-serif;
+  font-size: 2.275rem;
+  font-weight: 500;
+`;
+
+const Description = styled.p`
+  margin: 40px auto 60px;
+  width: 80%;
+`;
+
+const Image = styled.img`
+  width: auto;
+  max-width: 80%;
+  margin: 0 auto 5rem;
+
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+`;
+
 export default ({ data }) => {
   const path = data.allPortfolioDataJson.edges[0].node;
   console.log("this is my data: ", data)
 
   return (
-    <DetailWrapper>
-      <TopBar><ExitBtn /></TopBar>
-    </DetailWrapper>
+    <React.Fragment>
+      <DetailWrapper>
+        <TopBar><ExitBtn /></TopBar>
+        <Container>
+          <Title>{path.title}</Title>
+          <Subtitle>{path.subtitle}</Subtitle>
+          <Description>I designed this site and it was fun.</Description>
+          {path.assets.map(item => {
+            return <Image src={item} alt="" />
+          })}
+        </Container>
+      </DetailWrapper>
+      <GlobalStyle />
+    </React.Fragment>
   )
 }
 
