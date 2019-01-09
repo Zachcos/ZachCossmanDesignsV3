@@ -9,9 +9,11 @@ import bgIgm from '../../public/images/bg_blur.jpg';
 import logo from '../../public/images/zcd.svg';
 import arrowDown from '../../public/images/arrowdown.svg';
 import headshot from "../../public/images/zcoss.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 /******************************************************
-HERO SECTION
+ HERO SECTION
 ******************************************************/
 const HeroWrapper = styled.div`
   background: url(${bgIgm}) no-repeat center;
@@ -118,6 +120,16 @@ const ContactWrapper = styled.div`
 
 const SocialIcons = styled.div`
   display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 40%;
+  svg {
+    max-width: 60px;
+    transition: color 250ms;
+    &:hover {
+      color: #955251;
+    }
+  }
 `;
 
 export default ({ data }) => (
@@ -158,6 +170,11 @@ export default ({ data }) => (
       <p>Looking for my work as actor? Visit: <br />
         <a href="http://www.zachcossman.com" target="_blank">zachcossman.com</a>
       </p>
+      <SocialIcons>
+        <FontAwesomeIcon icon={faInstagram} size="4x"/>
+        <FontAwesomeIcon icon={faGithub} size="4x"/>
+        <FontAwesomeIcon icon={faTwitter} size="4x"/>
+      </SocialIcons>
     </ContactWrapper>
     <GlobalStyle />
   </React.Fragment>
