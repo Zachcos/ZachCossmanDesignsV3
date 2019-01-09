@@ -88,6 +88,20 @@ const Description = styled.p`
   width: 80%;
 `;
 
+const UrlLink = styled.a`
+  font-size: 1.375em;
+  font-family: "bebas_neue_regularregular", sans-serif;
+  color:#252525;
+  text-transform: uppercase;
+  text-decoration: underline;
+  display: block;
+  margin: 0 auto 60px;
+  width: 100px;
+  &:hover {
+    color: #955251;
+  }
+`;
+
 const Image = styled.img`
   width: auto;
   max-width: 80%;
@@ -102,6 +116,12 @@ export default ({ data }) => {
   const path = data.allPortfolioDataJson.edges[0].node;
   console.log("this is my data: ", data)
 
+  const checkForUrl = () => {
+    if (path.liveUrl !== "") {
+      return <UrlLink href={path.liveUrl} target="_blank" rel="noopener noreferrer">Visit Site</UrlLink>
+    }
+  }
+
   return (
     <React.Fragment>
       <DetailWrapper>
@@ -109,7 +129,8 @@ export default ({ data }) => {
         <Container>
           <Title>{path.title}</Title>
           <Subtitle>{path.subtitle}</Subtitle>
-          <Description>I designed this site and it was fun.</Description>
+          <Description>{path.description}</Description>
+          {checkForUrl()}
           {path.assets.map(item => {
             return <Image src={item} alt="" />
           })}
@@ -126,8 +147,10 @@ export const query = graphql`
       edges {
         node {
           slug
+          liveUrl
           title
           subtitle
+          description
           assets
         }
       }
