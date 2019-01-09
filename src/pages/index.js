@@ -124,6 +124,7 @@ const SocialIcons = styled.div`
   margin: 0 auto;
   width: 40%;
   svg {
+    color: #4e5258;
     max-width: 60px;
     transition: color 250ms;
     &:hover {
@@ -171,9 +172,15 @@ export default ({ data }) => (
         <a href="http://www.zachcossman.com" target="_blank" rel="noopener noreferrer">zachcossman.com</a>
       </p>
       <SocialIcons>
-        <FontAwesomeIcon icon={faInstagram} size="4x"/>
-        <FontAwesomeIcon icon={faGithub} size="4x"/>
-        <FontAwesomeIcon icon={faTwitter} size="4x"/>
+        <a href="https://www.instagram.com/zachcossman/" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faInstagram} size="4x" />
+        </a>
+        <a href="https://www.github.com/Zachcos" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faGithub} size="4x"/>
+        </a>
+        <a href="https://www.twitter.com/ZachCossman" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faTwitter} size="4x"/>
+        </a>
       </SocialIcons>
     </ContactWrapper>
     <GlobalStyle />
