@@ -112,34 +112,38 @@ const Image = styled.img`
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
 `;
 
-export default ({ data }) => {
-  const path = data.allPortfolioDataJson.edges[0].node;
-  console.log("this is my data: ", data)
+export class PortfolioDetail extends React.PureComponent {
+  state = { show: true }
 
-  const checkForUrl = () => {
-    if (path.liveUrl !== "") {
-      return <UrlLink href={path.liveUrl} target="_blank" rel="noopener noreferrer">Visit Site</UrlLink>
+  render() {
+    const checkForUrl = () => {
+      if (liveUrl !== "") {
+        return <UrlLink href={liveUrl} target="_blank" rel="noopener noreferrer">Visit Site</UrlLink>
+      }
     }
-  }
 
-  return (
-    <React.Fragment>
-      <DetailWrapper>
-        <TopBar><ExitBtn onClick={() => window.history.back()} /></TopBar>
-        <Container>
-          <Title>{path.title}</Title>
-          <Subtitle>{path.subtitle}</Subtitle>
-          <Description>{path.description}</Description>
-          {checkForUrl()}
-          {path.assets.map(item => {
-            return <Image src={item} alt="" />
-          })}
-        </Container>
-      </DetailWrapper>
-      <GlobalStyle />
-    </React.Fragment>
-  )
+    const { title, subtitle, description, liveUrl, assets } = this.props.data.allPortfolioDataJson.edges[0].node;
+    return (
+      <React.Fragment>
+        <DetailWrapper>
+          <TopBar><ExitBtn onClick={() => window.history.back()} /></TopBar>
+          <Container>
+            <Title>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+            <Description>{description}</Description>
+            {checkForUrl()}
+            {assets.map(item => {
+              return <Image src={item} alt="" />
+            })}
+          </Container>
+        </DetailWrapper>
+        <GlobalStyle />
+      </React.Fragment>
+    )
+  }
 }
+
+export default PortfolioDetail;
 
 export const query = graphql`
   query findPostBySlug($slug: String!) {
