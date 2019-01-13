@@ -125,7 +125,7 @@ export default ({ data }) => {
   return (
     <React.Fragment>
       <DetailWrapper>
-        <TopBar><ExitBtn /></TopBar>
+        <TopBar><ExitBtn onClick={() => window.history.back()} /></TopBar>
         <Container>
           <Title>{path.title}</Title>
           <Subtitle>{path.subtitle}</Subtitle>
