@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import GlobalStyle from "../imports/globalStyle";
+import { Transition } from "react-spring";
 
 const DetailWrapper = styled.div`
   height: 100%;
@@ -124,21 +125,29 @@ export class PortfolioDetail extends React.PureComponent {
 
     const { title, subtitle, description, liveUrl, assets } = this.props.data.allPortfolioDataJson.edges[0].node;
     return (
-      <React.Fragment>
-        <DetailWrapper>
-          <TopBar><ExitBtn onClick={() => window.history.back()} /></TopBar>
-          <Container>
-            <Title>{title}</Title>
-            <Subtitle>{subtitle}</Subtitle>
-            <Description>{description}</Description>
-            {checkForUrl()}
-            {assets.map(item => {
-              return <Image src={item} alt="" />
-            })}
-          </Container>
-        </DetailWrapper>
-        <GlobalStyle />
-      </React.Fragment>
+      <Transition
+        items={this.state.show}
+        from={{ opacity: 0 }}
+        enter={{ opacity: 1 }}
+        leave={{ opacity: 0 }}>
+        {item => props =>
+          <div style={props}>
+            <DetailWrapper>
+              <TopBar><ExitBtn onClick={() => window.history.back()} /></TopBar>
+              <Container>
+                <Title>{title}</Title>
+                <Subtitle>{subtitle}</Subtitle>
+                <Description>{description}</Description>
+                {checkForUrl()}
+                {assets.map(item => {
+                  return <Image src={item} alt="" />
+                })}
+              </Container>
+            </DetailWrapper>
+            <GlobalStyle />
+          </div>
+        }
+      </Transition>
     )
   }
 }
