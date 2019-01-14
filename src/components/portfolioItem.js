@@ -88,7 +88,7 @@ export default ({ data }) => (
       <Title>{data.title}</Title>
       <Divider />
       <Subtitle>{data.subtitle}</Subtitle>
-      <Button href="#">
+      <Button href={data.slug}>
         <h6>explore this project</h6>
       </Button>
     </Overlay>
