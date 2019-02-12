@@ -27,14 +27,35 @@ const PortItemWrapper = styled.div`
     &:hover {
       opacity: 100;
     }
+
+    @media screen and (max-width: 900px) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 300px;
+      padding: 160px 0 15px 25px;
+      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+      opacity: 1;
+      text-align: left;
+    }
   `;
 
   const Title = styled.h1`
     color: #b0925a;
     font-size: 3.5rem;
     line-height: 3.5rem;
-    padding-bottom: 15px;
+    padding-bottom: 0;
     margin: 0;
+
+    @media screen and (max-width: 900px) {
+      font-size: 2.5rem;
+      line-height: 2rem;
+      margin: 0 0 10px 0;
+      color: #fff
+    }
   `;
 
   const Subtitle = styled.h3`
@@ -44,6 +65,15 @@ const PortItemWrapper = styled.div`
 		margin-top: 20px;
 		text-transform: uppercase;
     font-size: 1.6rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: 1.6rem;
+      font-family: 'Source Sans Pro';
+      text-transform: uppercase;
+      line-height: 2rem;
+      color: #fff;
+      margin-top: 20px;
+    }
   `;
 
   const Divider = styled.div`
@@ -53,6 +83,14 @@ const PortItemWrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
     width: 120px;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      width: 120px;
+      height: 2px;
+      float: left;
+      background-color: #b0925a;
+    }
   `;
 
   const Button = styled.a`
@@ -60,10 +98,10 @@ const PortItemWrapper = styled.div`
 
     h6 {
       font-size: 1.8rem;
-      padding: 20px;
+      padding: 20px;  
       border: 2px solid white;
       width: 50%;
-      margin: 45px auto 0;
+      margin: 15px auto 0;
       text-transform: uppercase;
       color: #fff;
 
@@ -75,6 +113,18 @@ const PortItemWrapper = styled.div`
       &:hover {
         background: rgba(255,255,255,.55);
 	      color: rgba(50,50,50,1);
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      h6 {
+        font-size: 1.6rem;
+        padding: 10px;
+        border: 2px solid white;
+        width: 60%;
+        margion: 20px auto 0;
+        text-align: center;
+        float: left;
       }
     }
   `;
