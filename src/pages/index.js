@@ -131,6 +131,10 @@ const SocialIcons = styled.div`
       color: #955251;
     }
   }
+
+  @media screen and (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 export default ({ data }) => (
