@@ -77,17 +77,33 @@ const AboutWrapper = styled.div`
 
 const AboutMe = styled.div`
   float: left;
-  padding: 3%;
+  padding: 10% 3%;
   width: 60%;
   p {
-    margin: 5% 0;
+    margin: 10% 0 5% 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+      padding: 0 0 10% 0;
+    }
   }
 `;
 
 const Headshot = styled.img`
   border-radius: 50%;
   max-width: 400px;
+  max-height: 400px;
   width: 40%;
+  margin: 10% auto;
+
+  @media screen and (max-width: 900px) {
+    width: 70%;
+  }
 `;
 
 /******************************************************
@@ -157,7 +173,7 @@ export default ({ data }) => (
     </PortfolioWrapper>
     <AboutWrapper>
       <AboutMe>
-        <h1>Hey, I'm Zach.</h1>
+        <h1>Hey, I'm Zach</h1>
         <h3>I design websites</h3>
         <p>I am an actor, musician, and freelance designer.</p>
         <p>I create unique sites for clients with a simple aesthetic based on clean design and good typography.</p>
