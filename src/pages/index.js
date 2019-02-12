@@ -55,7 +55,7 @@ const PortfolioWrapper = styled.div`
 
 const PortfolioHead = styled.div`
   background: #6e6a67;
-  padding: 5%;
+  padding: 10% 5%;
   text-align: center;
   p {
     margin-top: 5rem;
@@ -112,7 +112,7 @@ CONTACT SECTION
 const ContactWrapper = styled.div`
   background: #aaa39d;
   color: #4e5258;
-  padding: 7% 5% 5% 5%;
+  padding: 10% 5% 5% 5%;
   text-align: center;
   width: 100%;
   h3 {
