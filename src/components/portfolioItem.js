@@ -35,7 +35,7 @@ const PortItemWrapper = styled.div`
       bottom: 0;
       width: 100%;
       height: 300px;
-      padding: 160px 0 15px 25px;
+      padding: 145px 0 15px 25px;
       background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
       background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
       opacity: 1;
