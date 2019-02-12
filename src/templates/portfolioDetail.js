@@ -65,6 +65,10 @@ const Container = styled.div`
   margin: 0 auto;
   max-width: 70%;
   text-align: center;
+
+  @media screen and (max-width: 900px) {
+    max-width: 90%;
+  }
 `;
 
 const Title = styled.h1`
@@ -86,6 +90,12 @@ const Subtitle = styled.h2`
 const Description = styled.p`
   margin: 40px auto 60px;
   width: 80%;
+
+  @media screen and (max-width: 900px) {
+    width: 90%;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
 `;
 
 const UrlLink = styled.a`
@@ -110,6 +120,10 @@ const Image = styled.img`
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+
+  @media screen and (max-width: 900px) {
+    max-width:  100%;
+  }
 `;
 
 export default ({ data }) => {
