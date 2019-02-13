@@ -127,8 +127,7 @@ const Image = styled.img`
 `;
 
 export default ({ data }) => {
-  const path = data.allPortfolioDataJson.edges[0].node;
-  console.log("this is my data: ", data)
+  const path = data.portfolioDataJson;
 
   const checkForUrl = () => {
     if (path.liveUrl !== "") {
@@ -156,18 +155,14 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query findPostBySlug($slug: String!) {
-    allPortfolioDataJson(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          slug
-          liveUrl
-          title
-          subtitle
-          description
-          assets
-        }
-      }
+  query ($slug: String!) {
+    portfolioDataJson(slug: { eq: $slug }) {
+        slug
+        liveUrl
+        title
+        subtitle
+        description
+        assets
     }
   }
 `
