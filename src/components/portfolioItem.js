@@ -11,6 +11,10 @@ const PortItemWrapper = styled.div`
   @media screen and (max-width: 900px) {
     width: 100%;
   }
+
+  @media screen and (min-width: 1660px) {
+    width: 33.3%;
+  }
   `;
   
   const Overlay = styled.div`
