@@ -79,6 +79,7 @@ const AboutWrapper = styled.div`
   @media screen and (min-width: 1660px) {
     width: 50%;
     float: left;
+    padding: 3%;
   }
 `;
 
@@ -143,6 +144,7 @@ const ContactWrapper = styled.div`
   @media screen and (min-width: 1660px) {
     width: 50%;
     float: right;
+    padding: 5%;
   }
 `;
 
