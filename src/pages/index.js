@@ -75,6 +75,11 @@ const AboutWrapper = styled.div`
   overflow: hidden;
   padding: 5%;
   text-align: center;
+
+  @media screen and (min-width: 1660px) {
+    width: 50%;
+    float: left;
+  }
 `;
 
 const AboutMe = styled.div`
@@ -134,6 +139,11 @@ const ContactWrapper = styled.div`
       color: #955251;
     }
   }
+
+  @media screen and (min-width: 1660px) {
+    width: 50%;
+    float: right;
+  }
 `;
 
 const SocialIcons = styled.div`
@@ -155,6 +165,13 @@ const SocialIcons = styled.div`
   }
 `;
 
+const PostPortContainer = styled.div`
+  @media screen and (min-width: 1660px) {
+    display: flex;
+    clear: both;
+  }
+`
+
 export default ({ data }) => (
   <React.Fragment>
     <HeroWrapper>
@@ -173,6 +190,7 @@ export default ({ data }) => (
         return <PortfolioItem key={uuidv4()} data={item.node} />
       })}
     </PortfolioWrapper>
+    <PostPortContainer>
     <AboutWrapper>
       <AboutMe>
         <h1>Hey, I'm Zach</h1>
@@ -205,6 +223,7 @@ export default ({ data }) => (
         </a>
       </SocialIcons>
     </ContactWrapper>
+    </PostPortContainer>
     <GlobalStyle />
   </React.Fragment>
 );
