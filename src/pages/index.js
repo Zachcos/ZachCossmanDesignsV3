@@ -62,6 +62,10 @@ const PortfolioHead = styled.div`
   p {
     margin-top: 5rem;
   }
+
+  @media screen and (min-width: 1660px) {
+    padding: 7%;
+  }
 `;
 
 /******************************************************
