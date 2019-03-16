@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import GlobalStyle from "../imports/globalStyle";
+import { Transition } from "react-spring";
 
 const DetailWrapper = styled.div`
   height: 100%;
@@ -126,33 +127,46 @@ const Image = styled.img`
   }
 `;
 
-export default ({ data }) => {
-  const path = data.portfolioDataJson;
+export class PortfolioDetail extends React.PureComponent {
+  state = { show: true }
 
-  const checkForUrl = () => {
-    if (path.liveUrl !== "") {
-      return <UrlLink href={path.liveUrl} target="_blank" rel="noopener noreferrer">Visit Site</UrlLink>
+  render() {
+    const checkForUrl = () => {
+      if (liveUrl !== "") {
+        return <UrlLink href={liveUrl} target="_blank" rel="noopener noreferrer">Visit Site</UrlLink>
+      }
     }
-  }
 
-  return (
-    <React.Fragment>
-      <DetailWrapper>
-        <TopBar><ExitBtn onClick={() => window.history.back()} /></TopBar>
-        <Container>
-          <Title>{path.title}</Title>
-          <Subtitle>{path.subtitle}</Subtitle>
-          <Description>{path.description}</Description>
-          {checkForUrl()}
-          {path.assets.map(item => {
-            return <Image src={item} alt="" />
-          })}
-        </Container>
-      </DetailWrapper>
-      <GlobalStyle />
-    </React.Fragment>
-  )
+    const { title, subtitle, description, liveUrl, assets } = this.props.data.portfolioDataJson;
+    return (
+      <Transition
+        items={this.state.show}
+        from={{ opacity: 0 }}
+        enter={{ opacity: 1 }}
+        leave={{ opacity: 0 }}>
+        {item => props =>
+          <div style={props}>
+            <DetailWrapper>
+              <TopBar><ExitBtn onClick={() => window.history.back()} /></TopBar>
+              <Container>
+                <Title>{title}</Title>
+                <Subtitle>{subtitle}</Subtitle>
+                <Description>{description}</Description>
+                {checkForUrl()}
+                {assets.map(item => {
+                  return <Image src={item} alt="" />
+                })}
+              </Container>
+            </DetailWrapper>
+            <GlobalStyle />
+          </div>
+        }
+      </Transition>
+    )
+  }
 }
+
+export default PortfolioDetail;
 
 export const query = graphql`
   query ($slug: String!) {
