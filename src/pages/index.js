@@ -197,7 +197,7 @@ export class Index extends React.Component {
                 <p>Check out a collection of my freelance work as a web designer and developer</p>
               </PortfolioHead>
               {data.allPortfolioDataJson.edges.map(item => {
-                return <PortfolioItem key={item.node.id} data={item.node} />
+                return <PortfolioItem key={uuidv4()} data={item.node} />
               })}
             </PortfolioWrapper>
             <AboutWrapper>
