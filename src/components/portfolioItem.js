@@ -57,7 +57,7 @@ const PortItemWrapper = styled.div`
     @media screen and (max-width: 900px) {
       font-size: 2.5rem;
       line-height: 2rem;
-      margin: 0 0 10px 0;
+      margin: 0 0 6px 0;
       color: #fff
     }
   `;
