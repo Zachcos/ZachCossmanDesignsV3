@@ -51,7 +51,7 @@ const PortItemWrapper = styled.div`
     color: #b0925a;
     font-size: 3.5rem;
     line-height: 3.5rem;
-    padding-bottom: 0;
+    padding-bottom: 10px;
     margin: 0;
 
     @media screen and (max-width: 900px) {
@@ -66,7 +66,7 @@ const PortItemWrapper = styled.div`
 		color: #fff;
 		font-family: 'Source Sans Pro';
 		line-height: 2rem;
-		margin-top: 20px;
+		margin-top: 10px;
 		text-transform: uppercase;
     font-size: 1.6rem;
 
