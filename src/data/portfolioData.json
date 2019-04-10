@@ -29,7 +29,7 @@
     "title": "Brooklyn Custom Shop",
     "subtitle": "Landing Page / Site Design",
     "imgUrl": "../../images/port-brooklyncustomshop.jpg",
-    "liveUrl": "http://zachcossmandesigns.com/bcs",
+    "liveUrl": "https://brooklyncustomshop.netlify.com/",
     "slug": "/brooklyncustomshop",
     "description": "A landing page for a ficticious guitar shop in my neighborhood in Brooklyn, NY. This was designed as landing page to showcase the featured items in each category, but could be easily adapted to be a fully-functioning site. Layout demo link below.",
     "assets": [
