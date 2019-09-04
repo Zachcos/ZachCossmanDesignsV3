@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Transition } from 'react-spring';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
@@ -181,92 +180,83 @@ export class Index extends React.Component {
     const { data } = this.props;
     const show = true;
     return (
-      <Transition
-        items={show}
-        from={{ opacity: 0 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
-      >
-        {item => props => (
-          <div style={props}>
-            <HeroWrapper>
-              <div>
-                <Logo src={`${logo}`} />
-              </div>
-              <ArrowDown src={`${arrowDown}`} />
-            </HeroWrapper>
-            <PortfolioWrapper>
-              <PortfolioHead>
-                <h1>Work</h1>
-                <h3>My recent work</h3>
-                <p>
-                  Check out a collection of my freelance work as a web designer
-                  and developer
-                </p>
-              </PortfolioHead>
-              {data.allPortfolioDataJson.edges.map(item => (
-                <PortfolioItem key={uuidv4()} data={item.node} />
-              ))}
-            </PortfolioWrapper>
-            <AboutWrapper>
-              <AboutMe>
-                <h1>Hey, I'm Zach.</h1>
-                <h3>I design websites</h3>
-                <p>I am an actor, musician, and freelance designer.</p>
-                <p>
-                  I create unique sites for clients with a simple aesthetic
-                  based on clean design and good typography.
-                </p>
-              </AboutMe>
-              <Headshot src={headshot} />
-            </AboutWrapper>
-            <ContactWrapper>
-              <h1>Get ahold of me.</h1>
-              <h3>Are business cards still a thing?</h3>
-
-              <p>
-                To talk about building your next project, email me at: <br />
-                <a href="MAILTO:zachcos@gmail.com">Zachcos@gmail.com</a>
-              </p>
-
-              <p>
-                Looking for my work as actor? Visit: <br />
-                <a
-                  href="http://www.zachcossman.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  zachcossman.com
-                </a>
-              </p>
-              <SocialIcons>
-                <a
-                  href="https://www.instagram.com/zachcossman/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={faInstagram} size="4x" />
-                </a>
-                <a
-                  href="https://www.github.com/Zachcos"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={faGithub} size="4x" />
-                </a>
-                <a
-                  href="https://www.twitter.com/ZachCossman"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={faTwitter} size="4x" />
-                </a>
-              </SocialIcons>
-            </ContactWrapper>
-            <GlobalStyle />
+      <div>
+        <HeroWrapper>
+          <div>
+            <Logo src={`${logo}`} />
           </div>
-        )}
-      </Transition>
+          <ArrowDown src={`${arrowDown}`} />
+        </HeroWrapper>
+        <PortfolioWrapper>
+          <PortfolioHead>
+            <h1>Work</h1>
+            <h3>My recent work</h3>
+            <p>
+              Check out a collection of my freelance work as a web designer and
+              developer
+            </p>
+          </PortfolioHead>
+          {data.allPortfolioDataJson.edges.map(item => (
+            <PortfolioItem key={uuidv4()} data={item.node} />
+          ))}
+        </PortfolioWrapper>
+        <AboutWrapper>
+          <AboutMe>
+            <h1>Hey, I'm Zach.</h1>
+            <h3>I design websites</h3>
+            <p>I am an actor, musician, and freelance designer.</p>
+            <p>
+              I create unique sites for clients with a simple aesthetic based on
+              clean design and good typography.
+            </p>
+          </AboutMe>
+          <Headshot src={headshot} />
+        </AboutWrapper>
+        <ContactWrapper>
+          <h1>Get ahold of me.</h1>
+          <h3>Are business cards still a thing?</h3>
+
+          <p>
+            To talk about building your next project, email me at: <br />
+            <a href="MAILTO:zachcos@gmail.com">Zachcos@gmail.com</a>
+          </p>
+
+          <p>
+            Looking for my work as actor? Visit: <br />
+            <a
+              href="http://www.zachcossman.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              zachcossman.com
+            </a>
+          </p>
+          <SocialIcons>
+            <a
+              href="https://www.instagram.com/zachcossman/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} size="4x" />
+            </a>
+            <a
+              href="https://www.github.com/Zachcos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} size="4x" />
+            </a>
+            <a
+              href="https://www.twitter.com/ZachCossman"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faTwitter} size="4x" />
+            </a>
+          </SocialIcons>
+        </ContactWrapper>
+        <GlobalStyle />
+      </div>
     );
   }
 }

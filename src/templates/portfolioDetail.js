@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Transition } from 'react-spring';
 import GlobalStyle from '../imports/globalStyle';
 
 const DetailWrapper = styled.div`
@@ -131,8 +130,6 @@ const Image = styled.img`
 `;
 
 export class PortfolioDetail extends React.PureComponent {
-  state = { show: true };
-
   render() {
     const checkForUrl = () => {
       if (liveUrl !== '') {
@@ -152,32 +149,23 @@ export class PortfolioDetail extends React.PureComponent {
       assets,
     } = this.props.data.portfolioDataJson;
     return (
-      <Transition
-        items={this.state.show}
-        from={{ opacity: 0 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
-      >
-        {item => props => (
-          <div style={props}>
-            <DetailWrapper>
-              <TopBar>
-                <ExitBtn onClick={() => window.history.back()} />
-              </TopBar>
-              <Container>
-                <Title>{title}</Title>
-                <Subtitle>{subtitle}</Subtitle>
-                <Description>{description}</Description>
-                {checkForUrl()}
-                {assets.map(item => (
-                  <Image src={item} alt="" />
-                ))}
-              </Container>
-            </DetailWrapper>
-            <GlobalStyle />
-          </div>
-        )}
-      </Transition>
+      <div>
+        <DetailWrapper>
+          <TopBar>
+            <ExitBtn onClick={() => window.history.back()} />
+          </TopBar>
+          <Container>
+            <Title>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+            <Description>{description}</Description>
+            {checkForUrl()}
+            {assets.map(item => (
+              <Image src={item} alt="" />
+            ))}
+          </Container>
+        </DetailWrapper>
+        <GlobalStyle />
+      </div>
     );
   }
 }
