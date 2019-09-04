@@ -1,8 +1,8 @@
-import React from "react";
-import { graphql } from "gatsby";
-import styled from "styled-components";
-import GlobalStyle from "../imports/globalStyle";
-import { Transition } from "react-spring";
+import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
+import { Transition } from 'react-spring';
+import GlobalStyle from '../imports/globalStyle';
 
 const DetailWrapper = styled.div`
   height: 100%;
@@ -21,20 +21,23 @@ const TopBar = styled.div`
 `;
 
 const ExitBtn = styled.div`
-  background:#252525;
+  background: #252525;
   display: block;
   height: 75px;
   position: fixed;
-  right:0;
-  top:0;
+  right: 0;
+  top: 0;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   width: 75px;
-  z-index:1000;
-  &:hover { background: #955251; }
-  &::before, &::after {
+  z-index: 1000;
+  &:hover {
+    background: #955251;
+  }
+  &::before,
+  &::after {
     background: #fff;
     border-radius: 3px;
     content: '';
@@ -57,8 +60,8 @@ const ExitBtn = styled.div`
   }
   &::after {
     -webkit-transform: rotate(-45deg);
-	  -moz-transform: rotate(-45deg);
-	  transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
 `;
 
@@ -73,7 +76,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: "bebas_neue_regularregular", sans-serif;
+  font-family: 'bebas_neue_regularregular', sans-serif;
   font-size: 3.75rem;
   font-weight: 500;
   line-height: 5.5rem;
@@ -83,7 +86,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.h2`
   color: #945351;
-  font-family: "bebas_neue_regularregular", sans-serif;
+  font-family: 'bebas_neue_regularregular', sans-serif;
   font-size: 2.275rem;
   font-weight: 500;
 `;
@@ -101,8 +104,8 @@ const Description = styled.p`
 
 const UrlLink = styled.a`
   font-size: 1.375em;
-  font-family: "bebas_neue_regularregular", sans-serif;
-  color:#252525;
+  font-family: 'bebas_neue_regularregular', sans-serif;
+  color: #252525;
   text-transform: uppercase;
   text-decoration: underline;
   display: block;
@@ -118,65 +121,78 @@ const Image = styled.img`
   max-width: 80%;
   margin: 0 auto 5rem;
 
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
 
   @media screen and (max-width: 900px) {
-    max-width:  100%;
+    max-width: 100%;
   }
 `;
 
 export class PortfolioDetail extends React.PureComponent {
-  state = { show: true }
+  state = { show: true };
 
   render() {
     const checkForUrl = () => {
-      if (liveUrl !== "") {
-        return <UrlLink href={liveUrl} target="_blank" rel="noopener noreferrer">Visit Site</UrlLink>
+      if (liveUrl !== '') {
+        return (
+          <UrlLink href={liveUrl} target="_blank" rel="noopener noreferrer">
+            Visit Site
+          </UrlLink>
+        );
       }
-    }
+    };
 
-    const { title, subtitle, description, liveUrl, assets } = this.props.data.portfolioDataJson;
+    const {
+      title,
+      subtitle,
+      description,
+      liveUrl,
+      assets,
+    } = this.props.data.portfolioDataJson;
     return (
       <Transition
         items={this.state.show}
         from={{ opacity: 0 }}
         enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}>
-        {item => props =>
+        leave={{ opacity: 0 }}
+      >
+        {item => props => (
           <div style={props}>
             <DetailWrapper>
-              <TopBar><ExitBtn onClick={() => window.history.back()} /></TopBar>
+              <TopBar>
+                <ExitBtn onClick={() => window.history.back()} />
+              </TopBar>
               <Container>
                 <Title>{title}</Title>
                 <Subtitle>{subtitle}</Subtitle>
                 <Description>{description}</Description>
                 {checkForUrl()}
-                {assets.map(item => {
-                  return <Image src={item} alt="" />
-                })}
+                {assets.map(item => (
+                  <Image src={item} alt="" />
+                ))}
               </Container>
             </DetailWrapper>
             <GlobalStyle />
           </div>
-        }
+        )}
       </Transition>
-    )
+    );
   }
 }
 
 export default PortfolioDetail;
 
 export const query = graphql`
-  query ($slug: String!) {
+  query($slug: String!) {
     portfolioDataJson(slug: { eq: $slug }) {
-        slug
-        liveUrl
-        title
-        subtitle
-        description
-        assets
+      slug
+      liveUrl
+      title
+      subtitle
+      description
+      assets
     }
   }
-`
+`;

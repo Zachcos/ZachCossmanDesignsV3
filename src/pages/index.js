@@ -1,23 +1,27 @@
-import React from "react"
-import { graphql } from "gatsby";
-import styled from "styled-components";
-import GlobalStyle from "../imports/globalStyle";
-import { Transition } from "react-spring";
+import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
+import { Transition } from 'react-spring';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faInstagram,
+  faGithub,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import GlobalStyle from '../imports/globalStyle';
 
-import PortfolioItem from "../components/portfolioItem";
+import PortfolioItem from '../components/portfolioItem';
 
 import bgIgm from '../../public/images/bg_blur.jpg';
 import logo from '../../public/images/zcd.svg';
 import arrowDown from '../../public/images/arrowdown.svg';
-import headshot from "../../public/images/zcoss.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import headshot from '../../public/images/zcoss.jpg';
 
 const uuidv4 = require('uuid/v4');
 
-/******************************************************
+/** ****************************************************
  HERO SECTION
-******************************************************/
+***************************************************** */
 const HeroWrapper = styled.div`
   background: url(${bgIgm}) no-repeat center;
   display: table;
@@ -44,9 +48,9 @@ const ArrowDown = styled.img`
   position: absolute;
 `;
 
-/******************************************************
+/** ****************************************************
 PORTFOLIO SECTION
-******************************************************/
+***************************************************** */
 const PortfolioWrapper = styled.div`
   background-attachment: fixed, scroll;
   background-color: #615464;
@@ -69,9 +73,9 @@ const PortfolioHead = styled.div`
   }
 `;
 
-/******************************************************
+/** ****************************************************
 ABOUT SECTION
-******************************************************/
+***************************************************** */
 const AboutWrapper = styled.div`
   background: #696c71;
   color: #e2e6e7;
@@ -119,9 +123,9 @@ const Headshot = styled.img`
   }
 `;
 
-/******************************************************
+/** ****************************************************
 CONTACT SECTION
-******************************************************/
+***************************************************** */
 const ContactWrapper = styled.div`
   background: #aaa39d;
   color: #4e5258;
@@ -174,71 +178,98 @@ const SocialIcons = styled.div`
 
 export class Index extends React.Component {
   render() {
-    const data = this.props.data;
+    const { data } = this.props;
     const show = true;
     return (
       <Transition
         items={show}
         from={{ opacity: 0 }}
         enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}>
-        { item => props =>
+        leave={{ opacity: 0 }}
+      >
+        {item => props => (
           <div style={props}>
             <HeroWrapper>
               <div>
                 <Logo src={`${logo}`} />
               </div>
-                <ArrowDown src={`${arrowDown}`} />
+              <ArrowDown src={`${arrowDown}`} />
             </HeroWrapper>
             <PortfolioWrapper>
               <PortfolioHead>
                 <h1>Work</h1>
                 <h3>My recent work</h3>
-                <p>Check out a collection of my freelance work as a web designer and developer</p>
+                <p>
+                  Check out a collection of my freelance work as a web designer
+                  and developer
+                </p>
               </PortfolioHead>
-              {data.allPortfolioDataJson.edges.map(item => {
-                return <PortfolioItem key={uuidv4()} data={item.node} />
-              })}
+              {data.allPortfolioDataJson.edges.map(item => (
+                <PortfolioItem key={uuidv4()} data={item.node} />
+              ))}
             </PortfolioWrapper>
             <AboutWrapper>
               <AboutMe>
                 <h1>Hey, I'm Zach.</h1>
                 <h3>I design websites</h3>
                 <p>I am an actor, musician, and freelance designer.</p>
-                <p>I create unique sites for clients with a simple aesthetic based on clean design and good typography.</p>
+                <p>
+                  I create unique sites for clients with a simple aesthetic
+                  based on clean design and good typography.
+                </p>
               </AboutMe>
               <Headshot src={headshot} />
             </AboutWrapper>
             <ContactWrapper>
               <h1>Get ahold of me.</h1>
               <h3>Are business cards still a thing?</h3>
-      
-              <p>To talk about building your next project, email me at: <br />
+
+              <p>
+                To talk about building your next project, email me at: <br />
                 <a href="MAILTO:zachcos@gmail.com">Zachcos@gmail.com</a>
               </p>
-      
-              <p>Looking for my work as actor? Visit: <br />
-                <a href="http://www.zachcossman.com" target="_blank" rel="noopener noreferrer">zachcossman.com</a>
+
+              <p>
+                Looking for my work as actor? Visit: <br />
+                <a
+                  href="http://www.zachcossman.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  zachcossman.com
+                </a>
               </p>
               <SocialIcons>
-                <a href="https://www.instagram.com/zachcossman/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.instagram.com/zachcossman/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FontAwesomeIcon icon={faInstagram} size="4x" />
                 </a>
-                <a href="https://www.github.com/Zachcos" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faGithub} size="4x"/>
+                <a
+                  href="https://www.github.com/Zachcos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub} size="4x" />
                 </a>
-                <a href="https://www.twitter.com/ZachCossman" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faTwitter} size="4x"/>
+                <a
+                  href="https://www.twitter.com/ZachCossman"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faTwitter} size="4x" />
                 </a>
               </SocialIcons>
             </ContactWrapper>
             <GlobalStyle />
           </div>
-        }
+        )}
       </Transition>
-    )
+    );
   }
-};
+}
 
 export default Index;
 
@@ -256,4 +287,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
