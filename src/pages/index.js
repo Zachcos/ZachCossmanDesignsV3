@@ -17,8 +17,6 @@ import logo from '../../static/images/zcd.svg';
 import arrowDown from '../../static/images/arrowdown.svg';
 import headshot from '../../static/images/zcoss.jpg';
 
-const uuidv4 = require('uuid/v4');
-
 /** ****************************************************
  HERO SECTION
 ***************************************************** */
@@ -198,7 +196,7 @@ export class Index extends React.Component {
             </p>
           </PortfolioHead>
           {data.allPortfolioDataJson.edges.map(item => (
-            <PortfolioItem key={uuidv4()} data={item.node} />
+            <PortfolioItem key={item.id} data={item.node} />
           ))}
         </PortfolioWrapper>
         <AboutWrapper>
