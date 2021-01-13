@@ -137,30 +137,32 @@ const Button = styled.a`
       padding: 10px;
       border: 2px solid white;
       width: 60%;
-      margion: 20px auto 0;
+      margin: 20px auto 0;
       text-align: center;
       float: left;
     }
   }
 `;
 
-export default ({ data }) => (
-  <PortItemWrapper
-    style={{
-      background: `url('${data.imgUrl}')`,
-      backgroundSize: `cover`,
-      backgroundPosition: `50% 50%`,
-      backgroundRepeat: `no-repeat`,
-      float: `left`,
-    }}
-  >
-    <Overlay>
-      <Title>{data.title}</Title>
-      <Divider />
-      <Subtitle>{data.subtitle}</Subtitle>
-      <Button href={data.slug}>
-        <h6>explore this project</h6>
-      </Button>
-    </Overlay>
-  </PortItemWrapper>
-);
+export default function PortfolioItem({ data }) {
+  return (
+    <PortItemWrapper
+      style={{
+        background: `url('${data.imgUrl}')`,
+        backgroundSize: `cover`,
+        backgroundPosition: `50% 50%`,
+        backgroundRepeat: `no-repeat`,
+        float: `left`,
+      }}
+    >
+      <Overlay>
+        <Title>{data.title}</Title>
+        <Divider />
+        <Subtitle>{data.subtitle}</Subtitle>
+        <Button href={data.slug}>
+          <h6>explore this project</h6>
+        </Button>
+      </Overlay>
+    </PortItemWrapper>
+  );
+}

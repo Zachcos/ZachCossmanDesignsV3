@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -174,93 +173,87 @@ const SocialIcons = styled.div`
   }
 `;
 
-export class Index extends React.Component {
-  render() {
-    const { data } = this.props;
-    const show = true;
-    return (
-      <div>
-        <HeroWrapper>
-          <div>
-            <Logo src={`${logo}`} />
-          </div>
-          <ArrowDown src={`${arrowDown}`} />
-        </HeroWrapper>
-        <PortfolioWrapper>
-          <PortfolioHead>
-            <h1>Work</h1>
-            <h3>My recent work</h3>
-            <p>
-              Check out a collection of my freelance work as a web designer and
-              developer
-            </p>
-          </PortfolioHead>
-          {data.allPortfolioDataJson.edges.map(item => (
-            <PortfolioItem key={item.id} data={item.node} />
-          ))}
-        </PortfolioWrapper>
-        <AboutWrapper>
-          <AboutMe>
-            <h1>Hey, I'm Zach.</h1>
-            <h3>I design websites</h3>
-            <p>I am an actor, musician, and freelance designer.</p>
-            <p>
-              I create unique sites for clients with a simple aesthetic based on
-              clean design and good typography.
-            </p>
-          </AboutMe>
-          <Headshot src={headshot} />
-        </AboutWrapper>
-        <ContactWrapper>
-          <h1>Get ahold of me.</h1>
-          <h3>Are business cards still a thing?</h3>
-
+export default function Index({ data }) {
+  return (
+    <div>
+      <HeroWrapper>
+        <div>
+          <Logo src={`${logo}`} />
+        </div>
+        <ArrowDown src={`${arrowDown}`} />
+      </HeroWrapper>
+      <PortfolioWrapper>
+        <PortfolioHead>
+          <h1>Work</h1>
+          <h3>My recent work</h3>
           <p>
-            To talk about building your next project, email me at: <br />
-            <a href="MAILTO:zachcos@gmail.com">Zachcos@gmail.com</a>
+            Check out a collection of my freelance work as a web designer and
+            developer
           </p>
-
+        </PortfolioHead>
+        {data.allPortfolioDataJson.edges.map(item => (
+          <PortfolioItem key={item.id} data={item.node} />
+        ))}
+      </PortfolioWrapper>
+      <AboutWrapper>
+        <AboutMe>
+          <h1>Hey, I'm Zach.</h1>
+          <h3>I design websites</h3>
+          <p>I am an actor, musician, and freelance designer.</p>
           <p>
-            Looking for my work as actor? Visit: <br />
-            <a
-              href="http://www.zachcossman.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              zachcossman.com
-            </a>
+            I create unique sites for clients with a simple aesthetic based on
+            clean design and good typography.
           </p>
-          <SocialIcons>
-            <a
-              href="https://www.instagram.com/zachcossman/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faInstagram} size="4x" />
-            </a>
-            <a
-              href="https://www.github.com/Zachcos"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} size="4x" />
-            </a>
-            <a
-              href="https://www.twitter.com/ZachCossman"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faTwitter} size="4x" />
-            </a>
-          </SocialIcons>
-        </ContactWrapper>
-        <GlobalStyle />
-      </div>
-    );
-  }
+        </AboutMe>
+        <Headshot src={headshot} />
+      </AboutWrapper>
+      <ContactWrapper>
+        <h1>Get ahold of me.</h1>
+        <h3>Are business cards still a thing?</h3>
+
+        <p>
+          To talk about building your next project, email me at: <br />
+          <a href="MAILTO:zachcos@gmail.com">Zachcos@gmail.com</a>
+        </p>
+
+        <p>
+          Looking for my work as actor? Visit: <br />
+          <a
+            href="http://www.zachcossman.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            zachcossman.com
+          </a>
+        </p>
+        <SocialIcons>
+          <a
+            href="https://www.instagram.com/zachcossman/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} size="4x" />
+          </a>
+          <a
+            href="https://www.github.com/Zachcos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} size="4x" />
+          </a>
+          <a
+            href="https://www.twitter.com/ZachCossman"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faTwitter} size="4x" />
+          </a>
+        </SocialIcons>
+      </ContactWrapper>
+      <GlobalStyle />
+    </div>
+  );
 }
-
-export default Index;
 
 export const query = graphql`
   query {

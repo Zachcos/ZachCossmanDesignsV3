@@ -129,48 +129,43 @@ const Image = styled.img`
   }
 `;
 
-export class PortfolioDetail extends React.PureComponent {
-  render() {
-    const checkForUrl = () => {
-      if (liveUrl !== '') {
-        return (
-          <UrlLink href={liveUrl} target="_blank" rel="noopener noreferrer">
-            Visit Site
-          </UrlLink>
-        );
-      }
-    };
+export default function PortfolioDetail({ data }) {
+  const checkForUrl = () => {
+    if (data.portfolioDataJson.liveUrl !== '') {
+      return (
+        <UrlLink
+          href={data.portfolioDataJson.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Site
+        </UrlLink>
+      );
+    }
+  };
 
-    const {
-      title,
-      subtitle,
-      description,
-      liveUrl,
-      assets,
-    } = this.props.data.portfolioDataJson;
-    return (
-      <div>
-        <DetailWrapper>
-          <TopBar>
-            <ExitBtn onClick={() => window.history.back()} />
-          </TopBar>
-          <Container>
-            <Title>{title}</Title>
-            <Subtitle>{subtitle}</Subtitle>
-            <Description>{description}</Description>
-            {checkForUrl()}
-            {assets.map(item => (
-              <Image src={item} alt="" />
-            ))}
-          </Container>
-        </DetailWrapper>
-        <GlobalStyle />
-      </div>
-    );
-  }
+  const { title, subtitle, description, assets } = data.portfolioDataJson;
+
+  return (
+    <div>
+      <DetailWrapper>
+        <TopBar>
+          <ExitBtn onClick={() => window.history.back()} />
+        </TopBar>
+        <Container>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+          <Description>{description}</Description>
+          {checkForUrl()}
+          {assets.map(item => (
+            <Image src={item} alt="" />
+          ))}
+        </Container>
+      </DetailWrapper>
+      <GlobalStyle />
+    </div>
+  );
 }
-
-export default PortfolioDetail;
 
 export const query = graphql`
   query($slug: String!) {
