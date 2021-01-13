@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -11,10 +12,10 @@ import GlobalStyle from '../imports/globalStyle';
 
 import PortfolioItem from '../components/portfolioItem';
 
-import bgIgm from '../../public/images/bg_blur.jpg';
-import logo from '../../public/images/zcd.svg';
-import arrowDown from '../../public/images/arrowdown.svg';
-import headshot from '../../public/images/zcoss.jpg';
+import bgIgm from '../../static/images/bg_blur.jpg';
+import logo from '../../static/images/zcd.svg';
+import arrowDown from '../../static/images/arrowdown.svg';
+import headshot from '../../static/images/zcoss.jpg';
 
 const uuidv4 = require('uuid/v4');
 
