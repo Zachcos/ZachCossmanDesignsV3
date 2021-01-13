@@ -41,18 +41,17 @@ const ArrowDown = styled.img`
 PORTFOLIO SECTION
 ***************************************************** */
 const PortfolioWrapper = styled.div`
-  background-attachment: fixed, scroll;
   background-color: #615464;
-  background-size: cover;
-  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  clear: both;
 `;
 
 const PortfolioHead = styled.div`
   background: #6e6a67;
   padding: 10% 5%;
   text-align: center;
+  width: 100%;
   p {
     margin-top: 5rem;
   }
@@ -137,11 +136,7 @@ export default function Index({ data }) {
       <PortfolioWrapper>
         <PortfolioHead>
           <h1>Work</h1>
-          <h3>My recent work</h3>
-          <p>
-            Check out a collection of my freelance work as a web designer and
-            developer
-          </p>
+          <p>A collection of my freelance design and development work</p>
         </PortfolioHead>
         {data.allPortfolioDataJson.edges.map(item => (
           <PortfolioItem key={item.id} data={item.node} />
