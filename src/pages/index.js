@@ -1,14 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faInstagram,
-  faGithub,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
 import GlobalStyle from '../imports/globalStyle';
-
 import PortfolioItem from '../components/portfolioItem';
 
 import bgIgm from '../../static/images/bg_blur.jpg';
@@ -226,29 +219,6 @@ export default function Index({ data }) {
             zachcossman.com
           </a>
         </p>
-        <SocialIcons>
-          <a
-            href="https://www.instagram.com/zachcossman/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} size="4x" />
-          </a>
-          <a
-            href="https://www.github.com/Zachcos"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithub} size="4x" />
-          </a>
-          <a
-            href="https://www.twitter.com/ZachCossman"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faTwitter} size="4x" />
-          </a>
-        </SocialIcons>
       </ContactWrapper>
       <GlobalStyle />
     </div>
