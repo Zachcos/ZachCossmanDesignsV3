@@ -69,6 +69,14 @@ const GlobalStyle = createGlobalStyle`
     line-height: 7.5rem;
     margin-bottom: 25px;
   }
+
+  h2 {
+    font-family: 'bebas_neuebold', sans-serif;
+    font-weight: bold;
+    font-size: 5.5rem;
+    line-height: 7.5rem;
+    margin-bottom: 25px;
+  }
   
   h3 {
     font-family: 'bebas_neue_regularregular', sans-serif;
